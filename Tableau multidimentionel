@@ -1,0 +1,67 @@
+tablleau multidimentionel
+https://www.commentcamarche.net/contents/120-langage-c-les-tableaux
+
+
+
+Nom_du_tableau [0][0] = 2;
+
+Nom_du_tableau [0][1] = 3;
+
+
+int i,j;
+
+for (i=0; i<=2; i++){
+for (j=0; j<=3; j++){
+Tableau[i][j] = 0;
+
+}
+}
+
+
+https://openclassrooms.com/forum/sujet/ordonner-tableau-tableau-en-c
+
+#include <stdio.h>
+#include <stdlib.h>
+ 
+void ordonnerTableau(int tableau[], int tailleTableau);
+ 
+int main()
+{
+    int i,a,b,c,d,e,f;
+    printf("Entrez les 6 valeurs a classer : ");
+    scanf("%d",&a);
+    scanf("%d",&b);
+    scanf("%d",&c);
+    scanf("%d",&d);
+    scanf("%d",&e);
+    scanf("%d",&f);
+    int tableau[6] = {a,b,c,d,e,f};
+    ordonnerTableau(tableau, 6);
+    printf("Les nombres sont dans l'ordre : \n");
+    for (i = 0 ; i < 6 ; i++)
+    {
+        printf("%d\n", tableau[i]);
+    }
+}
+ 
+ 
+void ordonnerTableau(int tableau[], int tailleTableau)
+{
+    int i;
+    int t[tailleTableau];
+    for (i=0;i < tailleTableau;i++)
+    {
+        t[i]=tableau[i];
+    }
+        for (i=0;i < tailleTableau-1;i++)
+        {
+            if (t[i]>t[i+1])
+            {
+                tableau[i]=t[i+1];
+                tableau[i+1]=t[i];
+            }
+        }
+ 
+}
+
+
