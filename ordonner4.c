@@ -15,20 +15,25 @@ int main(int argc, char *argv[])
 void afficheNouveauTableau(double tableau[], int tailleTableau)
 {
     int k;
- 
+
     for (k = 0 ; k < tailleTableau ; k++)
     {
-        printf("%f", tableau[k]);
+        fprintf(stdout, " %2.2f ", tableau[k]);
     }
-    printf("\n");
- 
+    fprintf(stdout, "\n");
 }
+
 void ordonnerTableau(double tableau[], int tailleTableau)
 {
-    int i,temp,erreur;
+    int i = 0;
+    float temp = 0.0;
+    int erreur = 0;
+
     do
     {
         erreur=0;
+
+
         for(i=0;i<tailleTableau-1;i++)
             {
                 if(tableau[i]>tableau[i+1])
