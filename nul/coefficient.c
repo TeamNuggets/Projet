@@ -5,7 +5,6 @@
 #include <stdbool.h>
 #define WORD_SIZE_MAX 30
 
-
 // ira dans initialise_tableau.h
 bool initialise_tableau(int, int);
 
@@ -13,54 +12,48 @@ short int delimitage(void);
 
 char tableau[7][3];
 
-
 // ira dans initialise_tableau.c
 bool initialise_tableau(int i_max, int j_max)
 {
     int i = 0;
     int j = 0;
 
-    for (i=0; i<i_max; i++)
+    for (i = 0; i < i_max; i++)
     {
-        for (j=0; j<j_max; j++)
+        for (j = 0; j < j_max; j++)
         {
             tableau[i][j] = "0";
         }
     }
-    
-    
-    for (j=0; j<j_max; j++)
+
+    for (j = 0; j < j_max; j++)
     {
-	tableau[i][j]=tableau[2][j];
-	j==j+5;
-    }	
-    
+        tableau[i][j] = tableau[2][j];
+        j == j + 5;
+    }
+
     return true;
 }
 
-
-
-int main (void)
+int main(void)
 {
-    int i=0;
-    int j=0;
+    int i = 0;
+    int j = 0;
 
-    for (i=0; i<7; i++)
+    for (i = 0; i < 7; i++)
     {
-        for (j=0; j<3; j++)
+        for (j = 0; j < 3; j++)
         {
             fprintf(stdout, "%d ", tableau[i][j]);
         }
 
-        fprintf(stdout,"\n");
+        fprintf(stdout, "\n");
     }
 
     //delimitage();
 
-return 0;
+    return 0;
 }
-
-
 
 /*char choix (void)
 {
@@ -79,31 +72,3 @@ return 0;
 }
     
     */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
